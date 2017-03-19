@@ -6,7 +6,8 @@
   "scripts": {
     "start": "DEBUG=SERVER concurrently -k 'node_modules/.bin/nodemon start.js' 'node_modules/.bin/webpack --config ./webpack.dev.config.js'",
     "heroku-postbuild": "node_modules/.bin/webpack -p --config ./webpack.prod.config.js --progress",
-    "test": "mocha --watch"
+    "test": "mocha --watch",
+    "prod": "NODE_ENV=production concurrently -k 'node_modules/.bin/nodemon start.js' 'node_modules/.bin/webpack  --config ./webpack.prod.config.js --progress'"
   },
   "engines": {
     "node": "7.4.0",
