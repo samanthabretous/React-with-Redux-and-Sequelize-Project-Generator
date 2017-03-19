@@ -19,7 +19,7 @@ module.exports = {
       {
         test: [/\.jsx?$/, /\.js?$/],
         exclude: /(node_modules)/,
-        loaders: ['babel'],
+        loaders: ['babel-loader'],
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$|^(?!.*\.inline\.svg$).*\.svg$/,
@@ -32,7 +32,6 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   plugins: [
-    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       minimize: true,
       compress: {
