@@ -1,9 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
+require('react-hot-loader/patch');
+
 
 module.exports = {
   entry: [
-    './client/view/Entry.jsx',
+    'react-hot-loader/patch', // RHL patch
+    './client/view/Entry.jsx', // appʼs entry point
   ],
   output: {
     path: path.join(__dirname, '/client/view/public/bundle'),
@@ -21,7 +24,7 @@ module.exports = {
       {
         test: [/\.jsx?$/, /\.js?$/],
         exclude: /(node_modules)/,
-        loaders: ['babel'],
+        loaders: ['react-hot-loader/webpack', 'babel-loader'],
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$|^(?!.*\.inline\.svg$).*\.svg$/,
