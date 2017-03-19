@@ -1,5 +1,25 @@
 ## Database Setup
-You'll first need to setup a database for the project. Then, in the `back/env/development.js` file you'll need to change the 'DATABASE_URI' to your specific database setup.
+You'll first need to setup a database for the project. Then, add a `config.json` file to `server/db/config`. You'll need to change the information to your specific database setup.
+
+`{
+  "development": {
+    "username": "root",
+    "password": "",
+    "database": "project-generator",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": "",
+    "database": "project-generator_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL"
+  }
+}`
 
 ## Start
 First: `npm install`

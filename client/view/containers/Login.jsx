@@ -35,7 +35,6 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <h1>Login</h1>
         Username:
         <input name="username" onChange={this.updateInput} type="text" />
         Password:

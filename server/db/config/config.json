@@ -1,15 +1,8 @@
 {
   "development": {
-    "username": "root",
-    "password": "",
+    "username": "Samantha",
+    "password": "2d?e>oy:6,I1",
     "database": "project-generator",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
-  },
-  "test": {
-    "username": "root",
-    "password": "",
-    "database": "project-generator_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
